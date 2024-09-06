@@ -9,7 +9,6 @@ export const Landing = () => {
           alt="hoodie image"
           fill
           objectFit="cover"
-          // className="rounded-2xl"
         />
       </div>
       <div className="absolute bottom-8 left-8">
