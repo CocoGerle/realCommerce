@@ -1,17 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FiSearch, FiHeart, FiShoppingCart } from "react-icons/fi";
 
 export const Header = () => {
   return (
     <header className="bg-black py-[16px] px-[24px] flex justify-between text-white">
       <div className="flex gap-[16px] items-center">
-        <Image
-          width={32}
-          height={32}
-          src={"/Pinecone.png"}
-          alt="Pinecone logo"
-        />
-        <p className="">Бүтээгдэхүүн</p>
+        <Link href={`/`}>
+          <Image
+            width={32}
+            height={32}
+            src={"/Pinecone.png"}
+            alt="Pinecone logo"
+          />
+        </Link>
+        <Link href={`/category`}>
+          <p>Бүтээгдэхүүн</p>
+        </Link>
       </div>
       <div className="bg-[#18181B] flex gap-2 items-center py-[8px] px-[16px] rounded-md w-[300px]">
         <FiSearch size={24} />
