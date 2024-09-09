@@ -40,7 +40,7 @@ export const Cards: React.FC<MyComponentProps> = ({
           className="transition-transform duration-300 transform hover:scale-150"
         />
         <div
-          onClick={() => toggleHeart([index])}
+          onClick={() => toggleHeart(index)}
           className="absolute right-4 top-4 cursor-pointer"
         >
           {hearts[index] ? <GoHeartFill size={24} /> : <GoHeart size={24} />}

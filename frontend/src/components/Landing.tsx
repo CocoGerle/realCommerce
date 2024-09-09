@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Cards } from "./Cards";
 import React, { useContext } from "react";
 import { ProductContext } from "./utils/context";
+import Link from "next/link";
 
 export const Landing = () => {
   const context = useContext(ProductContext);
@@ -35,13 +36,15 @@ export const Landing = () => {
             index === 6 ? "764px" : index === 7 ? "764px" : "331px";
           return (
             <div key={index}>
-              <Cards
-                img={item.img}
-                title={item.title}
-                price={item.price}
-                customHeight={customHeight}
-                index={index}
-              />
+              <Link href={`detail`}>
+                <Cards
+                  img={item.img}
+                  title={item.title}
+                  price={item.price}
+                  customHeight={customHeight}
+                  index={index}
+                />
+              </Link>
             </div>
           );
         })}
