@@ -1,25 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FiSearch, FiHeart, FiShoppingCart } from "react-icons/fi";
+import { FiSearch, FiHeart, FiShoppingCart, FiUser } from "react-icons/fi";
 
 export const Header = () => {
   return (
     <header className="bg-black py-[16px] px-[24px] flex justify-between text-white">
       <div className="flex gap-[16px] items-center">
         <Link href={`/`}>
-          <Image
-            width={32}
-            height={32}
-            src={"/Pinecone.png"}
-            alt="Pinecone logo"
-          />
+          <div className="flex items-center gap-[6px]">
+            <Image
+              width={32}
+              height={32}
+              src={"/Pinecone.png"}
+              alt="Pinecone logo"
+            />
+            <p>ECOMMERCE</p>
+          </div>
         </Link>
         <Link href={`/category`}>
-          <p>Бүтээгдэхүүн</p>
+          <p>Ангилал</p>
         </Link>
       </div>
       <div className="bg-[#18181B] flex gap-2 items-center py-[8px] px-[16px] rounded-md w-[300px]">
         <FiSearch size={24} />
+
         <input
           placeholder="Бүтээгдэхүүн  хайх"
           type="search"
@@ -27,13 +31,18 @@ export const Header = () => {
         />
       </div>
       <div className="flex gap-[24px] items-center">
-        <FiHeart size={24} />
+        <Link href={`saved`}>
+          <FiHeart size={24} />
+        </Link>
         <FiShoppingCart size={24} />
+        <Link href={`userInfo`}>
+          <FiUser size={24} />
+        </Link>
         <div className="flex gap-2">
-          <button className="border border-[#2563EB] rounded-md py-[8px] px-[12px]">
+          <button className="border border-[#2563EB] w-[101px] rounded-3xl ">
             Бүртгүүлэх
           </button>
-          <button className="bg-[#2563EB] rounded-md py-[8px] px-[12px]">
+          <button className="border border-[#2563EB] rounded-3xl w-[101px] py-[8px] px-[12px]">
             Нэвтрэх
           </button>
         </div>

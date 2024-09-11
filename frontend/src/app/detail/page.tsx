@@ -16,7 +16,6 @@ const Detail = () => {
   const { product } = context;
   return (
     <div>
-      <Header />
       <ProductDetail />
       <div className="mt-[80px] mb-[87px] max-w-screen-xl m-auto">
         <h1 className="text-[30px] font-bold mb-[24px]">Холбоотой бараа</h1>
@@ -37,7 +36,6 @@ const Detail = () => {
           })}
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

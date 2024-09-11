@@ -13,7 +13,6 @@ const Category = () => {
   const { product } = context;
   return (
     <div>
-      <Header />
       <div className="w-[1280px] m-auto flex justify-around pt-12 pb-24">
         <div className="flex flex-col gap-12  pr-40">
           <div>
@@ -56,7 +55,6 @@ const Category = () => {
           })}
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
