@@ -3,9 +3,11 @@ import { productModel } from "../../models/product.schema";
 
 export const createProductController: RequestHandler = async (req, res) => {
   try {
-    const { productName, price } = req.body;
-
-    await productModel.create({ productName, price });
+    await productModel.create({
+      ...req.body,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
 
     return res.status(201).json({
       message: "Product created successfully",
